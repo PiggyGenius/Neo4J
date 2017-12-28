@@ -1,6 +1,9 @@
 # Neo4j
 
-## How to insert data
+# Create database
+    TODO: Explain how
+
+## Insert data
 	neo4j stop
 	neo4j-shell -path /path-to-neo4j/data/data/databases/graph.db -c < data.cypher
 	neo4j start
