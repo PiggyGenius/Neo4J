@@ -103,7 +103,32 @@ CREATE
 (Google)-[:LOCATED]->(NewYork),
 (Apple)-[:LOCATED]->(NewYork),
 (Facebook)-[:LOCATED]->(Paris),
-(Amazon)-[:LOCATED]->(London)
+(Amazon)-[:LOCATED]->(London),
+
+(HarryRobinson)-[:LIVES]->(London),
+(RussellPastor)-[:LIVES]->(London),
+(CarolBurke)-[:LIVES]->(NewYork),
+(JaniceDelgado)-[:LIVES]->(London),
+(VickyOsborne)-[:LIVES]->(London),
+(DevinWilliams)-[:LIVES]->(London),
+(SaraMcFerren)-[:LIVES]->(Paris),
+(AngelaMorales)-[:LIVES]->(Berlin),
+(JamarCheng)-[:LIVES]->(London),
+
+(RochPaquette)-[:LIVES]->(Paris),
+(MarieLariviere)-[:LIVES]->(Paris),
+(AgatheThibaut)-[:LIVES]->(Berlin),
+(OceaneLacharre)-[:LIVES]->(Paris),
+(ArnaudMarcheaux)-[:LIVES]->(London),
+(CarolineMercier)-[:LIVES]->(Paris),
+
+(DanielaMuller)-[:LIVES]->(Berlin),
+(EricHoch)-[:LIVES]->(Paris),
+(MariaSeiler)-[:LIVES]->(Berlin),
+(JanBeike)-[:LIVES]->(NewYork),
+(NicoleReinhardt)-[:LIVES]->(Berlin),
+(MarkusSholz)-[:LIVES]->(Berlin)
 ;
+
 
 MATCH (n) RETURN n;
