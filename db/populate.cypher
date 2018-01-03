@@ -129,6 +129,3 @@ CREATE
 (NicoleReinhardt)-[:LIVES]->(Berlin),
 (MarkusSholz)-[:LIVES]->(Berlin)
 ;
-
-
-MATCH (n) RETURN n;
