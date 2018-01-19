@@ -18,5 +18,5 @@ docker ps | grep neo4j
 
 ./query.sh <container-id> populate.cypher
 # Example: 
-# ./populate.sh 7691bbb048dd populate.cypher
+# ./query.sh 7691bbb048dd populate.cypher
 ```
