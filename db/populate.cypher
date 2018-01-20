@@ -2,6 +2,9 @@ MATCH (n) OPTIONAL MATCH (n)-[r]-() DELETE n,r;
 
 
 CREATE CONSTRAINT ON (c:Company) ASSERT c.name IS UNIQUE;
+CREATE CONSTRAINT ON (p:Place) ASSERT p.name IS UNIQUE;
+
+CREATE INDEX ON :Person(firstName, lastName);
 
 CREATE
 (HarryRobinson:Person:English {firstName:'Harry', lastName:'Robinson', born:1985}),
