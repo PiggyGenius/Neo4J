@@ -1,4 +1,4 @@
-MATCH (a:Person { firstName: "Jesus", lastName: "Christ" }),
-   (b:Person { firstName: "Jim", lastName: "Morrison" }), 
+MATCH (a:Person { firstName: "Marie", lastName: "Lariviere" }),
+   (b:Person { firstName: "Daniela", lastName: "Muller" }), 
    p = shortestPath((a)-[:FRIEND*]-(b))
 RETURN length(p);

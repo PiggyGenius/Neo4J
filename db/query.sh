@@ -1,13 +1,12 @@
 #!/bin/sh
 
-if [[ -z "$2" ]]
+if [ -z "$1" ]
 then
-    echo "Usage: ./query.sh <container-id> <cypher-file>"
-    echo "Example: ./query.sh fcfb4651a29f populate.cypher"
+    echo "Usage: ./query.sh <cypher-file>"
+    echo "Example: ./query.sh populate.cypher"
     exit 1
 fi
 
-container=$1
-file=$2
-docker cp "$file" $container:/query.cypher
-docker exec $container sh -c "bin/cypher-shell < /query.cypher"
+file=$1
+docker cp "$file" neo4j:/query.cypher
+docker exec neo4j sh -c "bin/cypher-shell < /query.cypher"
