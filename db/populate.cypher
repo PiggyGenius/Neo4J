@@ -1,4 +1,5 @@
 MATCH (n) OPTIONAL MATCH (n)-[r]-() DELETE n,r;
+DROP INDEX ON :Person(firstName, lastName);
 
 
 CREATE CONSTRAINT ON (c:Company) ASSERT c.name IS UNIQUE;
@@ -34,10 +35,12 @@ CREATE
 (HarryRobinson)-[:FRIEND]->(RussellPastor),
 (HarryRobinson)-[:FRIEND]->(CarolBurke),
 (CarolBurke)-[:FRIEND]->(RussellPastor),
+(CarolBurke)-[:MARIED]->(RussellPastor),
 (CarolBurke)-[:FRIEND]->(JaniceDelgado),
 (CarolBurke)-[:FRIEND]->(RochPaquette),
 (JaniceDelgado)-[:FRIEND]->(VickyOsborne),
 (JaniceDelgado)-[:FRIEND]->(DevinWilliams),
+(JaniceDelgado)-[:MARIED]->(DevinWilliams),
 (JaniceDelgado)-[:FRIEND]->(RochPaquette),
 (JaniceDelgado)-[:FRIEND]->(CarolineMercier),
 (JaniceDelgado)-[:FRIEND]->(DanielaMuller),
@@ -50,6 +53,7 @@ CREATE
 (AngelaMorales)-[:FRIEND]->(JamarCheng),
 (JamarCheng)-[:FRIEND]->(RochPaquette),
 (JamarCheng)-[:FRIEND]->(OceaneLacharre),
+(JamarCheng)-[:MARIED]->(OceaneLacharre),
 (JamarCheng)-[:FRIEND]->(ArnaudMarcheaux),
 (JamarCheng)-[:FRIEND]->(DanielaMuller),
 (JamarCheng)-[:FRIEND]->(EricHoch),
@@ -64,10 +68,12 @@ CREATE
 (OceaneLacharre)-[:FRIEND]->(CarolineMercier),
 (ArnaudMarcheaux)-[:FRIEND]->(CarolineMercier),
 (DanielaMuller)-[:FRIEND]->(EricHoch),
+(DanielaMuller)-[:MARIED]->(EricHoch),
 (DanielaMuller)-[:FRIEND]->(MariaSeiler),
 (MariaSeiler)-[:FRIEND]->(JanBeike),
 (JanBeike)-[:FRIEND]->(NicoleReinhardt),
 (JanBeike)-[:FRIEND]->(MarkusSholz),
+(JanBeike)-[:MARIED]->(MarkusSholz),
 (NicoleReinhardt)-[:FRIEND]->(MarkusSholz),
 
 (Google:Company {name:'Google', CA:'66'}),
