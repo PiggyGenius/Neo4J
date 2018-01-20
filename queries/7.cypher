@@ -1,2 +1,3 @@
-MATCH (:Person)-[w:WORKS]-(c:Company)
-RETURN w.position, c.name, avg(w.salary) ORDER BY c.name, avg(w.salary) desc;
+MATCH (:Person)-[w:WORKS]-(c:Company)-[:LOCATED]-(p:Place)
+RETURN w.position, c.name, p.name, avg(w.salary) 
+ORDER BY c.name, avg(w.salary) desc;
