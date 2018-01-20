@@ -1,6 +1,4 @@
 MATCH (n) OPTIONAL MATCH (n)-[r]-() DELETE n,r;
-DROP INDEX ON :Person(firstName, lastName);
-
 
 CREATE CONSTRAINT ON (c:Company) ASSERT c.name IS UNIQUE;
 CREATE CONSTRAINT ON (p:Place) ASSERT p.name IS UNIQUE;
