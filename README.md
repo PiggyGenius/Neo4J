@@ -21,12 +21,7 @@ Run a query with:
 
 ```
 cd db
-# Get container id
-docker ps | grep neo4j
-
-./query.sh <container-id> ../queries/<fname>.cypher
-# Example:
-# ./query.sh 5b3e3f5b80b2 ../queries/1.cypher
+./query.sh ../queries/<fname>.cypher
 ```
 
 ### \#1
