@@ -12,5 +12,5 @@ The database will be created if it does not exist.
 
 ```
 ./query.sh populate.cypher
-./query.sh test.cypher
+./query.sh ../queries/test.cypher
 ```

@@ -134,5 +134,6 @@ CREATE
 (MariaSeiler)-[:LIVES]->(Berlin),
 (JanBeike)-[:LIVES]->(NewYork),
 (NicoleReinhardt)-[:LIVES]->(Berlin),
-(MarkusSholz)-[:LIVES]->(Berlin)
-;
+(MarkusSholz)-[:LIVES]->(Berlin);
+
+MATCH(n) RETURN n;

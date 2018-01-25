@@ -1,12 +1,7 @@
-MATCH (n:Person)
-WHERE length(labels(n)) > 2
-RETURN DISTINCT filter(x IN labels(n) where x <> "Person");
-
-MATCH (n:Person)
-WHERE length(labels(n)) > 2 WITH COLLECT(DISTINCT filter(x IN labels(n) where x <> "Person")) AS nationalities
-RETURN nationalities;
-
-MATCH (n:Person)-[:LIVES]->(p:Place)
-WHERE length(labels(n)) > 2 
-WITH COLLECT(DISTINCT filter(x IN labels(n) where x <> "Person")) AS nationalities
-RETURN nationalities;
+MATCH (p:Person)-[:WORKS]-(c:Company)
+WHERE length(labels(p)) > 2
+WITH c.name as companyName, count(*) as nbMulti
+MATCH (pp:Person)-[:WORKS]-(cc:Company)
+WHERE cc.name = companyName
+RETURN cc.name, (nbMulti*1.0)/count(*) as percentage
+ORDER  BY percentage DESC;

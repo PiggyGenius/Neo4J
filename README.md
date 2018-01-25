@@ -7,14 +7,6 @@
 
 See `db/README.md`.
 
-## Data
-
-TODO
-
-## Indexes
-
-TODO
-
 ## Queries
 
 Run a query with:
@@ -24,34 +16,32 @@ cd db
 ./query.sh ../queries/<fname>.cypher
 ```
 
+For example to run the first query:
+```
+cd db
+./query.sh ../queries/1.cypher
+```
+
 ### \#1
 
-Degré de connexion entre deux personnes
+Degree of proximity between two persons.
 
 ### \#2
 
-Nombre de personnes par nationalité qui travaillent au dessus d’un âge.
+Number of persons by nationality that are working and were born after a given year.
 
 ### \#3
 
-Degré de connexion le plus lointain entre deux personnes.
+Maximum degree of proximity in our social network.
 
 ### \#4
 
-Nombre de personnes avec une nationalité dans une entreprise (à complexifier).
+Number of persons of a given nationality that work for a company.
 
 ### \#5
 
-Pour chaque multi-nationalité, trouver le lieu d’habitation le plus commun, puis
-le niveau de salaire pour chaque poste (des multi-nationaux) et retourner ceux
-qui ont un salaire supérieur (ou inférieur) aux nationaux avec le salaire et l'âge 
-moyen et ajouter à cela le salaire moyen pour le poste dans chacun des lieux les 
-plus communs de ses nationalités.
+Proportion of persons working in a company that have more than one nationality.
 
 ### \#6
 
-Proportion de multi-nationaux par entreprise
-
-### \#7
-
-Salaire moyen pour chaque poste dans une entreprise
+Mean salary of every kind of position for all the companies in our social network.
